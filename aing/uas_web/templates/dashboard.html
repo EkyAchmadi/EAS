@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <h2>Beranda</h2>
+    <nav>
+      <a href="/lihat">Lihat Data Diri</a>
+      <a href="/Menambahkan">Tambahkan Data Diri</a>
+      <a href="/login">Log Out</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="card">
+      <h3>Statistik Pengguna</h3>
+      <p id="total-users">Total Pengguna: 6</p>
+      <p id="active-users">Pengguna Aktif: 1</p>
+    </div>
+    <div class="card">
+      <h3>Aktivitas Terakhir</h3>
+      <ul id="recent-activities">
+        <!-- Data akan diisi oleh JavaScript -->
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

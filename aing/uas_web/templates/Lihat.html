@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/view_students.css') }}">
+</head>
+<body>
+    <h1>Data Mahasiswa</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>   
+                <th>Email</th>
+                <th>Program Studi</th>
+                <th>IPK</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student[1] }}</td>
+                <td>{{ student[2] }}</td>
+                <td>{{ student[3] }}</td>
+                <td>{{ student[4] }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="4">Belum ada data mahasiswa.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <nav><a href="/Menambahkan">Tambahkan Data Diri</a></nav>
+    <nav><a href="/dashboard"> Exit</a></nav>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Mahasiswa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_student.css') }}">
+</head>
+<body>
+    <h1>Tambah Data Mahasiswa</h1>
+    <form method="POST">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="jurusan">Program Studi:</label>
+        <input type="text" id="jurusan" name="jurusan" required><br><br>
+
+        <label for="nilai">IPK:</label>
+        <input type="number" id="nilai" name="nilai" step="0.01" min="0" max="4" required><br><br>
+
+        <button type="submit">Simpan</button>
+    </form>
+
+    <a href="/lihat">Lihat Data Diri</a>
+    <a href="/dashboard">Exit</a>
+    
+</body>
+</html>
